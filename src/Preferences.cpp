@@ -13,7 +13,8 @@
 #elif defined(ARDUINO) && (defined(ARDUINO_SAMD_NANO_33_IOT) || defined(ARDUINO_SAMD_MKRWIFI1010) || defined(ARDUINO_SAMD_MKRVIDOR4000))
   #define NVS_USE_WIFININA
 #elif defined(ARDUINO) && (defined(ESP8266) || defined(ARDUINO_ARCH_RP2040))
-  #define NVS_USE_LITTLEFS    // Use LittleFS by default
+  // #define NVS_USE_LITTLEFS    // Use LittleFS by default
+	#define NVS_USE_WIFININA
 #elif defined(ARDUINO) && defined(ESP32)
   #error "For ESP32 devices, please use the native Preferences library"
 #else
